@@ -55,7 +55,10 @@ SRCS:=	./srcs/ft_atoi.c \
 
 SRCO:=	./srcs/ft_safe_free.c \
 		./srcs/ft_null_strlen.c \
-		./srcs/get_next_line.c 
+		./srcs/get_next_line.c \
+		./srcs/ft_dcllist_new.c \
+		./srcs/ft_dcllist_add.c \
+		./srcs/ft_dcllist_size.c
 
 OBJS:= $(SRCS:.c=.o)
 OBJO:= $(SRCO:.c=.o)

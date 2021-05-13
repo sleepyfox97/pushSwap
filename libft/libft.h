@@ -23,6 +23,13 @@ typedef struct	s_list
 	struct s_list	*next;
 }	t_list;
 
+typedef struct	s_dcllist
+{
+	void				*contents;
+	struct s_dcllist	*next;
+	struct s_dcllist	*prev;
+}	t_dcllist;
+
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -79,4 +86,8 @@ void	*ft_safe_free(void	**ptr);
 size_t	ft_null_strlen(char *s);
 //get_next_line
 int get_next_line(int fd, char **line);
+//for doubly circularly linked list.
+t_dcllist	*ft_dcllstnew(void	*contents);
+void		ft_dcllist_add(t_dcllist **lst, t_dcllist *new);
+int			ft_dcllist_size(t_dcllist *dcllst);
 #endif
