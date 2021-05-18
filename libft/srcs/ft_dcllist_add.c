@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	ft_dcllist_add(t_dcllist **lst, t_dcllist *new)
+void	ft_dcllist_addfront(t_dcllist **lst, t_dcllist *new)
 {
 	if (lst == NULL)
 		return ;
@@ -12,3 +12,18 @@ void	ft_dcllist_add(t_dcllist **lst, t_dcllist *new)
 	new->next = (*lst);
 	return ;
 }
+
+void	ft_dcllist_addback(t_dcllist **lst, t_dcllist *new)
+{
+	if (lst == NULL)
+		return ;
+	if (*lst == NULL)
+		*lst = new;
+	(*lst)->next->prev = new;
+	new->next = (*lst)->next;
+	new->prev = (*lst);
+	(*lst)->next = new;
+	return ;
+}
+
+
