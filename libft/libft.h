@@ -87,7 +87,10 @@ size_t	ft_null_strlen(char *s);
 //get_next_line
 int get_next_line(int fd, char **line);
 //for doubly circularly linked list.
-t_dcllist	*ft_dcllstnew(void	*contents);
-void		ft_dcllist_add(t_dcllist **lst, t_dcllist *new);
+t_dcllist	*ft_dcllist_new(void	*contents);
+//*lstの前にnodeをつける．
+void		ft_dcllist_addfront(t_dcllist **lst, t_dcllist *new);
+//*lstの後ろにnodeを付ける．
+void		ft_dcllist_addback(t_dcllist **lst, t_dcllist *new);
 int			ft_dcllist_size(t_dcllist *dcllst);
 #endif
