@@ -31,5 +31,7 @@ int			*ft_check_input(int argc, char **argv);
 int			ft_check_argv(char *str);
 int			ft_check_dupulicate(int *num, int size);
 
+//check stack
+void		ft_check_stack(t_dcllist *a, t_dcllist *b);
 
 #endif

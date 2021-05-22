@@ -5,11 +5,17 @@ int	main(int argc, char *argv[])
 	t_dcllist	stack_a;
 	t_dcllist	stack_b;
 
-	stack_a->contents = NULL;
-	stack_b->contents = NULL;
-	ft_make_stack(stack_a, argc, argv);
+	stack_a.contents = NULL;
+	stack_a.next = &stack_a;
+	stack_a.prev = &stack_a;
+	stack_b.contents = NULL;
+	stack_b.next = &stack_b;
+	stack_b.prev = &stack_b;
+	ft_make_stack(argc, argv, &stack_a);
+	//ft_exec_rule(stack_a, stack_b);
+	ft_check_stack(&stack_a, &stack_b);
+	return (0);
 }
-
 
 
 
