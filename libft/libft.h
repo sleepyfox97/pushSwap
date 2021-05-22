@@ -80,6 +80,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //my original
+//ft_atol
+long	ft_atol(const char *str);
 //set null return NULL
 void	*ft_safe_free(void	**ptr);
 //when s == NULL return(0);

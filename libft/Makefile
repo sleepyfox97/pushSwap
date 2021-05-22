@@ -53,7 +53,8 @@ SRCS:=	./srcs/ft_atoi.c \
 		./srcs/ft_tolower.c \
 		./srcs/ft_toupper.c 
 
-SRCO:=	./srcs/ft_safe_free.c \
+SRCO:=	./srcs/ft_atol.c \
+		./srcs/ft_safe_free.c \
 		./srcs/ft_null_strlen.c \
 		./srcs/get_next_line.c \
 		./srcs/ft_dcllist_new.c \
