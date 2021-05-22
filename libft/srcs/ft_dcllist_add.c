@@ -13,6 +13,7 @@ void	ft_dcllist_addfront(t_dcllist **lst, t_dcllist *new)
 	return ;
 }
 
+//番兵がいるときはダブルポインタである必要なさそう．
 void	ft_dcllist_addback(t_dcllist **lst, t_dcllist *new)
 {
 	if (lst == NULL)

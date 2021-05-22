@@ -9,11 +9,11 @@ void	ft_pushAtoB(t_dcllist **a, t_dcllist **b)
 }
 
 
-int main(int argc, char *argv[])
-{
-	t_dcllist	stack_a;
-	t_dcllist	stack_b;
+// int main(int argc, char *argv[])
+// {
+// 	t_dcllist	stack_a;
+// 	t_dcllist	stack_b;
 
-	stack_a = ft_make_stack(argc, argv);
-	stack_b	= ft_make_stack(argc, argv);
-}
+// 	stack_a = ft_make_stack(argc, argv);
+// 	stack_b	= ft_make_stack(argc, argv);
+// }

@@ -10,10 +10,10 @@ int	*ft_check_input(int argc, char **argv)
 	long	tmp;
 
 	if (argc == 1)
-			return (ft_error(NULL));
+		return (ft_error(NULL));
 	num = (int *)malloc(sizeof(int) * (argc - 1));
 	if (num == NULL)
-		return (NULL);
+		return (ft_error(NULL));
 	i = 1;
 	while (i < argc)
 	{
@@ -72,7 +72,7 @@ int	ft_check_dupulicate(int *num, int size)
 
 //
 //gcc ft_check_input.c ft_error.c -I../include  -L../libft -lft
-//でコンパイルしたら，このファイルないの関数の挙動がチェック可能． 
+//でコンパイルしたら，このファイル内の関数の挙動がチェック可能． 
 //#include <stdio.h>
 // int main(int argc, char *argv[])
 // {

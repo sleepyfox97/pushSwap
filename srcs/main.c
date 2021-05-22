@@ -1,6 +1,14 @@
 #include "pushSwap.h"
 
+int	main(int argc, char *argv[])
+{
+	t_dcllist	stack_a;
+	t_dcllist	stack_b;
 
+	stack_a->contents = NULL;
+	stack_b->contents = NULL;
+	ft_make_stack(stack_a, argc, argv);
+}
 
 
 
