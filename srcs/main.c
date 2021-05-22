@@ -12,7 +12,7 @@ int	main(int argc, char *argv[])
 	stack_b.next = &stack_b;
 	stack_b.prev = &stack_b;
 	ft_make_stack(argc, argv, &stack_a);
-	//ft_exec_rule(stack_a, stack_b);
+	ft_exec_rule(&stack_a, &stack_b);
 	ft_check_stack(&stack_a, &stack_b);
 	return (0);
 }
