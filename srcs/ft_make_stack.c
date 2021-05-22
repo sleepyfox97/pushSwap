@@ -1,5 +1,7 @@
 #include "pushSwap.h"
 
+//コマンドライン引数を用いて番兵ノードを持った
+//現状番兵もmallocしているが，しない方がいいかもしれない．(freeするときのこととかを考えると)
 t_dcllist	*ft_make_stack(int argc, char *argv[])
 {
 	t_dcllist	*node0;
@@ -13,12 +15,11 @@ t_dcllist	*ft_make_stack(int argc, char *argv[])
 	i = 1;
 	while (i < argc)
 	{
-		//check argvを用意する．
 		tmp = ft_make_set(ft_atoi(argv[i]), i);
 		node = ft_dcllist_new(tmp);
 		if (node == NULL)
 		{
-			//freeする．
+			//失敗した場合にfreeする．
 			return (NULL);
 		}
 		ft_dcllist_addfront(&node0, node);
