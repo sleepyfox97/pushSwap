@@ -7,18 +7,21 @@ void	ft_put_dcllistcontents(t_dcllist *lst)
 	if (lst->contents == NULL)
 	{
 		printf("=======This is head of the list=======\n");
-		printf("lst->prev = %p\n", lst->prev);
-		printf("     lst  = %p\n", lst);
-		printf("lst->next = %p\n", lst->next);
-		return ;
+		printf("\x1b[33mlst->prev = %p\x1b[39m\n", lst->prev);
+		printf("\x1b[35m     lst  = %p\x1b[39m\n", lst);
+		printf("\x1b[36mlst->next = %p\x1b[39m\n", lst->next);
 	}
-	else
+	lst = lst->next;
+	while (lst->contents != NULL)
 	{
 		printf("===========This is [%d] list===========\n", ((t_set *)lst->contents)->index);
-		printf("lst->prev = %p\n", lst->prev);
-		printf("     lst  = %p\n", lst);
-		printf("lst->next = %p\n", lst->next);
+		printf("\x1b[33mlst->prev = %p\x1b[39m\n", lst->prev);
+		printf("\x1b[35m     lst  = %p\x1b[39m\n", lst);
+		printf("\x1b[36mlst->next = %p\x1b[39m\n", lst->next);
 		printf("\x1b[32mnum = %d\x1b[39m\n\n", ((t_set *)lst->contents)->num);
+		lst = lst->next;
 	}
 	return ;
 }
+
+

@@ -72,7 +72,7 @@ int	ft_check_dupulicate(int *num, int size)
 
 //
 //gcc ft_check_input.c ft_error.c -I../include  -L../libft -lft
-//でコンパイルしたら，このファイル内の関数の挙動がチェック可能． 
+//でコンパイルしたら，このファイル内の関数の挙動がチェック可能．
 //#include <stdio.h>
 // int main(int argc, char *argv[])
 // {

@@ -1,10 +1,18 @@
 #include "pushSwap.h"
 
 //a,bはそれぞれのstackの先頭(番兵node)とする.命令としては"pb"になる．
-void	ft_pushAtoB(t_dcllist **a, t_dcllist **b)
+void	ft_pushAtoB(t_dcllist *a, t_dcllist *b)
 {
-	(*a)->next = ft_dcllist_takenoed((*a)->next);
-	ft_dcllist_addback(b, (*a)->next);
+	t_dcllist	*first;
+
+	if (a->next->contents == NULL)
+	{
+		write(2, "Error\n",  6);
+		exit (0);
+	}
+	first = a->next;
+	ft_dcllist_takenoed(first);
+	ft_dcllist_addback(&b, first);//これだけだとfirstの前後がつながらない．
 	return ;
 }
 

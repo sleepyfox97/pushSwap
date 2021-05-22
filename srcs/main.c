@@ -1,24 +1,27 @@
 #include "pushSwap.h"
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	t_dcllist	stack_a;
 	t_dcllist	stack_b;
 
-	stack_a.contents = NULL;
-	stack_a.next = &stack_a;
-	stack_a.prev = &stack_a;
-	stack_b.contents = NULL;
-	stack_b.next = &stack_b;
-	stack_b.prev = &stack_b;
+	ft_initiate(&stack_a, &stack_b);
 	ft_make_stack(argc, argv, &stack_a);
 	ft_exec_rule(&stack_a, &stack_b);
 	ft_check_stack(&stack_a, &stack_b);
 	return (0);
 }
 
-
-
+void	ft_initiate(t_dcllist *a, t_dcllist *b)
+{
+	a->contents = NULL;
+	a->next = a;
+	a->prev = a;
+	b->contents = NULL;
+	b->next = b;
+	b->prev = b;
+	return ;
+}
 
 //checker用のmain.cとpush swap用のmain.cをそれぞれ用意したい．
 //srcsディレクトリをpushswap用，checker用，共通の三つのディレクトリに分けて，scrcをlibftと合わせてライブラリにして，それを残り二つと組み合わせるみたいなコンパイルの仕方にする？
@@ -30,15 +33,14 @@ int	main(int argc, char *argv[])
 
 // int main(int argc, char *argv[])
 // {
-	//check argc and argv
-	//make_stack
+	// check argc and argv
+	// make_stack
 
-	//while roop	
-		//get standard input
-		//by the input valinable do some order to the stack
-	
-	//check stack A and B
-	//return good or not.
+	// while roop
+	// 	get standard input
+	// 	by the input valinable do some order to the stack
+	// check stack A and B
+	// return good or not.
 // }
 
 
