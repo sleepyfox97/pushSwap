@@ -99,7 +99,7 @@ int	get_next_line(int fd, char **line)
 		{
 			buf = read(fd, pre, 99);
 			pre[buf] = '\0';
-			box = null_strjoin(box, pre);
+			box = null_strjoin(box, pre, buf);
 			if (ft_find_newline(box) || buf == 0 || box == NULL)
 				break ;
 		}
