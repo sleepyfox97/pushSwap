@@ -23,5 +23,3 @@ void	ft_put_dcllistcontents(t_dcllist *lst)
 	}
 	return ;
 }
-
-
