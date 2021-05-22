@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-static int		check(char const s, char c)
+static int	check(char const s, char c)
 {
 	if (s == c)
 		return (1);
@@ -20,7 +20,7 @@ static int		check(char const s, char c)
 		return (0);
 }
 
-static int		box_num(char const *s, char c)
+static int	box_num(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -38,7 +38,7 @@ static int		box_num(char const *s, char c)
 	return (i);
 }
 
-static char		*into_box(const char *s, char c, int i)
+static char	*into_box(const char *s, char c, int i)
 {
 	char	*tmp;
 	int		b;
@@ -63,7 +63,7 @@ static char		*into_box(const char *s, char c, int i)
 	return (tmp);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**box;
 	int		i;

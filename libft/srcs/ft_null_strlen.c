@@ -14,12 +14,12 @@
 
 size_t	ft_null_strlen(char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (s == NULL)
 		return (0);
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }

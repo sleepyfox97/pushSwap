@@ -25,5 +25,3 @@ void	ft_dcllist_addback(t_dcllist **lst, t_dcllist *new)
 	(*lst)->next = new;
 	return ;
 }
-
-
