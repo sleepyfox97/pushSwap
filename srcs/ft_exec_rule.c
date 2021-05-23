@@ -29,20 +29,20 @@ void	ft_choose_rule(t_dcllist *a, t_dcllist *b, char *line)
 		ft_pushAtoB(b, a);
 	else if (!ft_strncmp(line, "pb", 3))
 		ft_pushAtoB(a, b);
+	else if (!ft_strncmp(line, "ra", 3))
+		ft_rotate(a);
+	else if (!ft_strncmp(line, "rb", 3))
+		ft_rotate(b);
+	else if (!ft_strncmp(line, "rr", 3))
+		ft_both_rotate(a, b);
+	else if (!ft_strncmp(line, "rra", 4))
+		ft_rrotate(a);
+	else if (!ft_strncmp(line, "rrb", 4))
+		ft_rrotate(b);
+	else if (!ft_strncmp(line, "rrr", 4))
+		ft_both_rrotate(a, b);
 	else
 		write(2, "Error\n", 6);
-	// else if (!ft_strncmp(line, "ra", 3))
-	// 	ft_swap();
-	// else if (!ft_strncmp(line, "rb", 3))
-	// 	ft_swap();
-	// else if (!ft_strncmp(line, "rr", 3))
-	// 	ft_swap();
-	// else if (!ft_strncmp(line, "rra", 4))
-	// 	ft_swap();
-	// else if (!ft_strncmp(line, "rrb", 4))
-	// 	ft_swap();
-	// else if (!ft_strncmp(line, "rrr", 4))
-	// 	ft_swap();
 	// ft_put_dcllistcontents(a);
 	// ft_put_dcllistcontents(b);
 	return ;
