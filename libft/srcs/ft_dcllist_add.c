@@ -14,6 +14,7 @@ void	ft_dcllist_addfront(t_dcllist **lst, t_dcllist *new)
 }
 
 //番兵がいるときはダブルポインタである必要なさそう．
+//newのprevのnextを書き換えてない．
 void	ft_dcllist_addback(t_dcllist **lst, t_dcllist *new)
 {
 	if (lst == NULL)
