@@ -33,7 +33,7 @@ void	ft_make_stack(int argc, char *argv[], t_dcllist *sentinel)
 
 void	ft_make_stack_error(t_dcllist *sentinel, t_set *set, int *num)
 {
-	ft_error(num);
+	ft_error1(num);
 	ft_safe_free((void **)&set);
 	//ft_dclclear(sentinel);
 	exit (0);

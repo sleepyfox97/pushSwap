@@ -10,23 +10,23 @@ int	*ft_check_input(int argc, char **argv)
 	long	tmp;
 
 	if (argc == 1)
-		return (ft_error(NULL));
+		return (ft_error1(NULL));
 	num = (int *)malloc(sizeof(int) * (argc - 1));
 	if (num == NULL)
-		return (ft_error(NULL));
+		return (ft_error1(NULL));
 	i = 1;
 	while (i < argc)
 	{
 		if (ft_check_argv(argv[i]) == _ERROR)
-			return (ft_error((void *)num));
+			return (ft_error1((void *)num));
 		tmp = ft_atol(argv[i]);
 		if (tmp < INT_MIN || INT_MAX < tmp)
-			return (ft_error((void *)num));
+			return (ft_error1((void *)num));
 		num[i - 1] = (int)tmp;
 		i++;
 	}
 	if(ft_check_dupulicate(num, argc - 1) == _ERROR)
-		return (ft_error((void *)num));
+		return (ft_error1((void *)num));
 	return (num);
 }
 

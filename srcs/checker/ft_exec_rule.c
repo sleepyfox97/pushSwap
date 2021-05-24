@@ -9,12 +9,11 @@ void	ft_exec_rule(t_dcllist *a, t_dcllist *b)
 	while (i != _ERROR)
 	{
 		i = get_next_line(0, &line);
-		ft_choose_rule(a, b, line);
 		if (i == -1)
 			exit (0);
+		ft_choose_rule(a, b, line);
+ft_put_stack_el(a, b);
 	}
-ft_put_dcllistcontents(a);
-ft_put_dcllistcontents(b);
 }
 
 void	ft_choose_rule(t_dcllist *a, t_dcllist *b, char *line)
@@ -42,8 +41,6 @@ void	ft_choose_rule(t_dcllist *a, t_dcllist *b, char *line)
 	else if (!ft_strncmp(line, "rrr", 4))
 		ft_both_rrotate(a, b);
 	else
-		write(2, "Error\n", 6);
-	// ft_put_dcllistcontents(a);
-	// ft_put_dcllistcontents(b);
+		ft_error2(a, b);
 	return ;
 }

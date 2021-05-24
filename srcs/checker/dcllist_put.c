@@ -23,3 +23,27 @@ void	ft_put_dcllistcontents(t_dcllist *lst)
 	}
 	return ;
 }
+
+
+void	ft_put_stack_el(t_dcllist *lsta, t_dcllist *lstb)
+{
+	if (lsta->contents == NULL)
+		printf("\nA[ ");
+	lsta = lsta->next;
+	while (lsta->contents != NULL)
+	{
+		printf("\x1b[32m%d\x1b[39m ", ((t_set *)lsta->contents)->num);
+		lsta = lsta->next;
+	}
+	printf("]\n");
+	if (lstb->contents == NULL)
+		printf("B[ ");
+	lstb = lstb->next;
+	while (lstb->contents != NULL)
+	{
+		printf("\x1b[32m%d\x1b[39m ", ((t_set *)lstb->contents)->num);
+		lstb = lstb->next;
+	}
+	printf("]\n");
+	return ;
+}
