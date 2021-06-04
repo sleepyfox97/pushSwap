@@ -5,9 +5,10 @@ _BLUE	=	\033[34m
 _END	=	\033[0m
 
 NAME		:= libft.a
-HEADERPATH	:= ./libft.h
 CC			:= gcc
 GCC_OPTIONS	:= -Wall -Wextra -Werror
+INCLUDE		:= include
+
 
 SRCS:=	./srcs/ft_atoi.c \
 		./srcs/ft_bzero.c \
@@ -83,8 +84,8 @@ fclean:
 
 re: fclean all
 
-%.o: %.c $(HEADERPATH)
-	@$(CC) -c $(GCC_OPTIONS) -o $@ $<
+%.o: %.c
+	@$(CC) -I $(INCLUDE) -c $(GCC_OPTIONS) -o $@ $<
 	@printf "$(_YELLOW)>$(_END)"
 
 

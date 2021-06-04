@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 //双方向循環リストなので，前後ろがない．
 void	ft_dcllist_add(t_dcllist **lst, t_dcllist *new)
