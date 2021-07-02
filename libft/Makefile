@@ -5,7 +5,7 @@ _BLUE	=	\033[34m
 _END	=	\033[0m
 
 NAME		:= libft.a
-HEADERPATH	:= ./libft.h
+HEADERPATH	:= ./include/libft.h
 CC			:= gcc
 GCC_OPTIONS	:= -Wall -Wextra -Werror
 
@@ -51,9 +51,10 @@ SRCS:=	./srcs/ft_atoi.c \
 		./srcs/ft_strtrim.c \
 		./srcs/ft_substr.c \
 		./srcs/ft_tolower.c \
-		./srcs/ft_toupper.c 
+		./srcs/ft_toupper.c
 
 SRCO:=	./srcs/ft_atol.c \
+		./srcs/ft_myatoi.c \
 		./srcs/ft_safe_free.c \
 		./srcs/ft_null_strlen.c \
 		./srcs/get_next_line.c \
@@ -84,7 +85,7 @@ fclean:
 re: fclean all
 
 %.o: %.c $(HEADERPATH)
-	@$(CC) -c $(GCC_OPTIONS) -o $@ $<
+	@$(CC) -c $(GCC_OPTIONS) -o $@ $< -I./include
 	@printf "$(_YELLOW)>$(_END)"
 
 

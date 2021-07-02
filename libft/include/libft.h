@@ -82,6 +82,8 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 //my original
 //ft_atol
 long		ft_atol(const char *str);
+//ft_myatoi (over INT, return NULL)
+long		*ft_myatoi(char *s, long *num);
 //set null return NULL
 void		*ft_safe_free(void	**ptr);
 //when s == NULL return(0);
