@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 int	ft_dcllist_size(t_dcllist *dcllst)
 {
