@@ -32,6 +32,8 @@ void	ft_make_stack(int argc, char *argv[], t_dcllist *sentinel)
 
 void	ft_dclclear(t_dcllist *dcllst)
 {
+	t_dcllist	*tmp;
+
 	dcllst = dcllst->next;
 	while(dcllst->contents == NULL)
 	{

@@ -4,9 +4,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "../libft/libft.h"
+# include "../libft/include/libft.h"
 
 #define _ERROR 0
+#define _BAD 0
+#define _GOOD 1
 #define _SA 11
 #define _SB 12
 #define _SS 13
@@ -17,7 +19,7 @@
 #define _RR	18
 #define _RRA 19
 #define _RRB 20
-#define _RRR 21 
+#define _RRR 21
 
 typedef	struct s_set
 {
@@ -68,7 +70,7 @@ void		ft_put_stack_el(t_dcllist *lsta, t_dcllist *lstb);
 //for push_swap program
 //
 //check the argumet is already sorted.
-void		ft_check_stack_a(&stack_a);
+//void		ft_check_stack_a(&stack_a);
 
 
 #endif

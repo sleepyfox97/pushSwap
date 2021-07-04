@@ -14,16 +14,16 @@ int		main(int argc, char *argv[])
 	return (0);
 }
 
-void	ft_initiate(t_dcllist *a, t_dcllist *b)
-{
-	a->contents = NULL;
-	a->next = a;
-	a->prev = a;
-	b->contents = NULL;
-	b->next = b;
-	b->prev = b;
-	return ;
-}
+// void	ft_initiate(t_dcllist *a, t_dcllist *b)
+// {
+// 	a->contents = NULL;
+// 	a->next = a;
+// 	a->prev = a;
+// 	b->contents = NULL;
+// 	b->next = b;
+// 	b->prev = b;
+// 	return ;
+// }
 
 //checker用のmain.cとpush swap用のmain.cをそれぞれ用意したい．
 //srcsディレクトリをpushswap用，checker用，共通の三つのディレクトリに分けて，scrcをlibftと合わせてライブラリにして，それを残り二つと組み合わせるみたいなコンパイルの仕方にする？

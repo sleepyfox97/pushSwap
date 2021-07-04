@@ -5,6 +5,7 @@
 int	*ft_check_input(int argc, char **argv)
 {
 	int		i;
+	int		j;
 	int		*num;
 	long	tmp;
 

@@ -1,7 +1,5 @@
 #include "pushSwap.h"
 
-#include <stdio.h>
-
 void	ft_exec_rule(t_dcllist *a, t_dcllist *b)
 {
 	char	*line;
