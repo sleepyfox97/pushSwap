@@ -10,23 +10,22 @@ int	*ft_check_input(int argc, char **argv)
 	long	tmp;
 
 	if (argc == 1)
-		return (ft_error(NULL));
+		return (ft_error1(NULL));
 	num = (int *)malloc(sizeof(int) * (argc - 1));
 	if (num == NULL)
-		return (ft_error(NULL));
+		return (ft_error1(NULL));
 	i = 1;
 	while (i < argc)
 	{
 		if (ft_check_argv(argv[i]) == _ERROR)
-			return (ft_error((void *)num));
-		tmp = ft_atol(argv[i]);
-		if (tmp < INT_MIN || INT_MAX < tmp)
-			return (ft_error((void *)num));
+			return (ft_error1((void *)num));
+		if (!ft_myatoi(argv[i], &tmp))
+			return (ft_error1((void *)num));
 		num[i - 1] = (int)tmp;
 		i++;
 	}
 	if(ft_check_dupulicate(num, argc - 1) == _ERROR)
-		return (ft_error((void *)num));
+		return (ft_error1((void *)num));
 	return (num);
 }
 
@@ -70,10 +69,10 @@ int	ft_check_dupulicate(int *num, int size)
 	return (1);
 }
 
-//
-//gcc ft_check_input.c ft_error.c -I../include  -L../libft -lft
-//でコンパイルしたら，このファイル内の関数の挙動がチェック可能．
-//#include <stdio.h>
+
+// gcc ft_check_input.c ft_error.c -I../../include  -L../../libft -lft
+// でコンパイルしたら，このファイル内の関数の挙動がチェック可能．
+// #include <stdio.h>
 // int main(int argc, char *argv[])
 // {
 // 	int *num;

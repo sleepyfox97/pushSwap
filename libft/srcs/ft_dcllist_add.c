@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_dcllist_addfront(t_dcllist **lst, t_dcllist *new)
 {

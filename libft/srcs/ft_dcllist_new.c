@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 t_dcllist	*ft_dcllist_new(void *contents)
 {

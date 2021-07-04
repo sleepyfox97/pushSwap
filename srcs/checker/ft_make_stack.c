@@ -1,7 +1,6 @@
 #include "pushSwap.h"
 
 //コマンドライン引数を用いて番兵ノードを持った
-//現状番兵もmallocしているが，しない方がいいかもしれない．(freeするときのこととかを考えると)
 //argc argv, stack_aを受け取って，いい感じにstackを作る関数．途中で失敗したら，エラー文出してfreeした後にexitして終了
 //番兵ノード＝sentinel node
 
@@ -31,11 +30,22 @@ void	ft_make_stack(int argc, char *argv[], t_dcllist *sentinel)
 	return ;
 }
 
+void	ft_dclclear(t_dcllist *dcllst)
+{
+	dcllst = dcllst->next;
+	while(dcllst->contents == NULL)
+	{
+		dcllst = dcllst->next;
+		free(dcllst->prev->contents);
+		free(dcllst->prev);
+	}
+}
+
 void	ft_make_stack_error(t_dcllist *sentinel, t_set *set, int *num)
 {
-	ft_error(num);
+	ft_error1(num);
 	ft_safe_free((void **)&set);
-	//ft_dclclear(sentinel);
+	ft_dclclear(sentinel);
 	exit (0);
 }
 

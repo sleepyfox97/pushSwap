@@ -1,4 +1,4 @@
-#include "../libft.h"
+#include "libft.h"
 
 static char	*null_strjoin(char *s1, char *s2, int buf)
 {
