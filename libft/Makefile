@@ -8,6 +8,8 @@ NAME		:= libft.a
 HEADERPATH	:= ./include/libft.h
 CC			:= gcc
 GCC_OPTIONS	:= -Wall -Wextra -Werror
+INCLUDE		:= include
+
 
 SRCS:=	./srcs/ft_atoi.c \
 		./srcs/ft_bzero.c \
