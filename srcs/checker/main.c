@@ -5,21 +5,11 @@ int		main(int argc, char *argv[])
 {
 	t_dcllist	stack_a;
 	t_dcllist	stack_b;
-	t_dcllist	argo;
 
 	ft_initiate(&stack_a, &stack_b);
+	ft_check_input(argc, argv);
 	ft_make_stack(argc, argv, &stack_a);
-	ft_search_arugo(argc, &stack_a, &stack_b, &argo);
-	ft_push_argo(argo);
+	ft_exec_rule(&stack_a, &stack_b);
+	ft_check_stack(&stack_a, &stack_b);
 	return (0);
-}
-
-ft_search_arugo(int argc, t_dcllist stack_a, t_dcllist stack_b, t_dcllist argo)
-{
-	if (argc == 2)
-		
-	else if (argc == 3)
-
-	else if (argc == 4)
-	
 }
